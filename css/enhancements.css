@@ -1,0 +1,145 @@
+/* Minimal enhancements to increase interactivity without changing existing template styles */
+
+/* Scroll progress bar */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0;
+  background: linear-gradient(90deg, #3498db, #9b59b6);
+  z-index: 1000;
+  transition: width 0.1s linear;
+}
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+.reveal--shown {
+  opacity: 1;
+  transform: none;
+}
+
+/* Skills filter */
+#skill-filter {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  margin: 10px 0 20px;
+  padding: 10px 12px;
+  border: 1px solid #dcd9d9;
+  border-radius: 4px;
+  outline: none;
+}
+#skill-filter:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+/* Contact shortcuts */
+.contact-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 10px;
+}
+.contact-actions #copy-email {
+  background: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.contact-actions #copy-email:hover {
+  background: #217dbb;
+}
+.contact-actions .email-link {
+  padding: 8px 12px;
+  border: 1px solid #3498db;
+  border-radius: 4px;
+  color: #3498db;
+  text-decoration: none;
+}
+.contact-actions .email-link:hover {
+  background: #eef6ff;
+}
+
+/* Theme toggle button */
+.theme-toggle-btn {
+  position: fixed;
+  top: 10px;
+  right: 52px; /* leave space for mobile menu button */
+  z-index: 1100;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.4);
+  color: #ffd166;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+}
+html.theme-light .theme-toggle-btn {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #111;
+}
+
+/* Dark theme overrides */
+html.theme-dark, html.theme-dark body {
+  background-color: #0b0d10;
+  color: #e5e7eb;
+}
+html.theme-dark a { color: #9cc8ff; }
+html.theme-dark a:hover { color: #b7d8ff; }
+
+/* Header */
+html.theme-dark header ul { background: #11151a; }
+html.theme-dark header a { color: #9cc8ff; }
+html.theme-dark header a:hover { background: #1b2330; color: #d3e6ff; }
+
+/* Section alternates */
+html.theme-dark .background-alt { background-color: #0f1115; }
+
+/* Cards / blocks */
+html.theme-dark .project,
+html.theme-dark .education-block,
+html.theme-dark #experience-timeline .vtimeline-content {
+  background: #111418;
+  color: #e5e7eb;
+  border-color: #2a2f36;
+}
+html.theme-dark .shadow-large {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Timeline accents */
+html.theme-dark .vtimeline-date { color: #cbd5e1; }
+html.theme-dark .vtimeline-icon { background: #1a1f27; border-color: #2a2f36; }
+
+/* Footer */
+html.theme-dark footer { background: #0a0c0f; color: #cbd5e1; }
+html.theme-dark footer .social a i { color: #cbd5e1; }
+html.theme-dark .top span { border-color: #4b5563; }
+html.theme-dark .top i { color: #9aa3b2; }
+
+/* Forms */
+html.theme-dark #contact-form input,
+html.theme-dark #contact-form textarea {
+  background: #0e1116;
+  color: #e5e7eb;
+  border: 1px solid #2b3036;
+}
+html.theme-dark #contact-form input::placeholder,
+html.theme-dark #contact-form textarea::placeholder { color: #94a3b8; }
+
+/* Buttons */
+html.theme-dark .btn-rounded-white { color: #e5e7eb; border-color: #e5e7eb; }
+html.theme-dark .btn-rounded-white:hover { background: #e5e7eb; color: #0b0d10; }
