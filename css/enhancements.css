@@ -313,8 +313,117 @@ html.theme-dark #experience-timeline .vtimeline-content {
   display: block;
 }
 
+#projects .project.project-collapsible {
+  display: grid;
+  grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+  align-items: stretch;
+}
+
+#projects .project-collapsible .project-image {
+  min-height: 100%;
+  background: var(--surface-strong);
+}
+
+#projects .project-collapsible .project-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+#projects .project-collapsible .project-info {
+  position: relative;
+  top: auto;
+  transform: none;
+  margin-left: 0;
+  padding: 28px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#projects .project-collapsible:hover .project-info,
+#projects .project-collapsible:focus-within .project-info,
+#projects .project-collapsible.project--expanded .project-info {
+  justify-content: flex-start;
+}
+
+.project-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
 .project-info h3 {
+  margin: 0;
   line-height: 1.25;
+}
+
+.project-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border: 1px solid var(--border-soft);
+  border-radius: 999px;
+  background: var(--surface-soft);
+  color: var(--text-strong);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.project-toggle:hover {
+  transform: translateY(-1px);
+  background: var(--accent-soft);
+  border-color: var(--border-strong);
+}
+
+.project-toggle:after {
+  content: "+";
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+#projects .project.project--expanded .project-toggle:after {
+  content: "\2212";
+}
+
+.project-details {
+  max-height: 0;
+  margin-top: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: max-height 0.35s ease, margin-top 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
+}
+
+.project-details-inner {
+  padding-top: 2px;
+}
+
+#projects .project-collapsible:hover .project-details,
+#projects .project-collapsible:focus-within .project-details,
+#projects .project-collapsible.project--expanded .project-details {
+  max-height: 320px;
+  margin-top: 18px;
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+
+.project-details p {
+  margin: 0 0 14px;
+  line-height: 1.6;
+}
+
+.project-details a {
+  display: inline-flex;
+  align-items: center;
 }
 
 .project-info p {
@@ -787,6 +896,26 @@ html.theme-dark #skills .skill-pill-list li {
   #view-more-projects {
     min-width: 0;
     width: 100%;
+  }
+
+  #projects .project.project-collapsible {
+    display: block;
+  }
+
+  #projects .project-collapsible .project-info {
+    padding: 24px 18px;
+    justify-content: flex-start;
+  }
+
+  .project-toggle {
+    width: 100%;
+    justify-content: center;
+  }
+
+  #projects .project-collapsible:hover .project-details,
+  #projects .project-collapsible:focus-within .project-details,
+  #projects .project-collapsible.project--expanded .project-details {
+    max-height: 480px;
   }
 
   #skills {

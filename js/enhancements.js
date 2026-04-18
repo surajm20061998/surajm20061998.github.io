@@ -113,7 +113,59 @@
       }
     });
 
-    // 7) Reveal on scroll
+    // 7) Make project cards expandable
+    Array.prototype.forEach.call(document.querySelectorAll('#projects .project'), function (project, index) {
+      var info = project.querySelector('.project-info');
+      var title = info ? info.querySelector('h3') : null;
+      if (!info || !title || info.querySelector('.project-toggle')) return;
+
+      var nodes = [];
+      var cursor = title.nextSibling;
+      while (cursor) {
+        var next = cursor.nextSibling;
+        nodes.push(cursor);
+        cursor = next;
+      }
+
+      var summary = document.createElement('div');
+      summary.className = 'project-summary';
+
+      var button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'project-toggle';
+      button.textContent = 'More Details';
+
+      var details = document.createElement('div');
+      details.className = 'project-details';
+      details.id = 'project-details-' + (index + 1);
+
+      var detailsInner = document.createElement('div');
+      detailsInner.className = 'project-details-inner';
+
+      button.setAttribute('aria-expanded', 'false');
+      button.setAttribute('aria-controls', details.id);
+
+      summary.appendChild(title);
+      summary.appendChild(button);
+      info.insertBefore(summary, info.firstChild);
+      details.appendChild(detailsInner);
+      info.appendChild(details);
+
+      nodes.forEach(function (node) {
+        if (node.nodeType === 3 && !node.textContent.trim()) return;
+        detailsInner.appendChild(node);
+      });
+
+      project.classList.add('project-collapsible');
+
+      button.addEventListener('click', function () {
+        var isExpanded = project.classList.toggle('project--expanded');
+        button.textContent = isExpanded ? 'Hide Details' : 'More Details';
+        button.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+      });
+    });
+
+    // 8) Reveal on scroll
     var reveals = [];
     try {
       var selectors = [
@@ -144,7 +196,7 @@
       }
     } catch (e) {}
 
-    // 8) Remove any stale injected skills filter UI
+    // 9) Remove any stale injected skills filter UI
     Array.prototype.forEach.call(
       document.querySelectorAll('#skills input[type="search"], #skills input[placeholder*="Filter"], #skills input[placeholder*="filter"], #skills .skills-filter, #skills .skills-search'),
       function (el) {
@@ -152,7 +204,7 @@
       }
     );
 
-    // 9) Contact quick actions (copy email)
+    // 10) Contact quick actions (copy email)
     (function () {
       var form = document.querySelector('#contact-form');
       if (!form) return;
@@ -190,11 +242,11 @@
       });
     })();
 
-    // 10) Improve contact email placeholder
+    // 11) Improve contact email placeholder
     var emailInput = document.querySelector('#contact-form input[type="email"]');
     if (emailInput) emailInput.placeholder = 'Your email';
 
-    // 11) Hero role rotator
+    // 12) Hero role rotator
     (function () {
       var role = document.querySelector('#lead-content h2');
       if (!role) return;
