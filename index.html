@@ -335,115 +335,146 @@
     <div id="skills">
         <div class="container">
             <div class="skills-shell shadow-large">
-                <h2 class="heading">Skills</h2>
-                <p class="skills-intro">
-                    I like working across the full ML product stack, from research and training to inference, backend engineering, and the infrastructure that keeps models reliable in production.
-                </p>
+                <div class="skills-header">
+                    <h2 class="heading">Skills</h2>
+                    <p class="skills-intro">
+                        I enjoy building across the full ML stack, from model development and evaluation to backend systems, inference platforms, and production operations.
+                    </p>
+                </div>
 
-                <div class="skills-grid">
-                    <section class="skill-group skill-group--ml">
-                        <div class="skill-group__header">
-                            <span class="skill-group__icon"><i class="fa fa-line-chart" aria-hidden="true"></i></span>
-                            <div>
-                                <p class="skill-group__eyebrow">Core Area</p>
-                                <h3>Machine Learning & AI</h3>
-                            </div>
-                        </div>
-                        <p class="skill-group__description">Modeling foundations for experimentation, applied research, and production-oriented learning systems.</p>
-                        <ul class="skill-list">
-                            <li>Machine Learning</li>
-                            <li>Deep Learning</li>
-                            <li>Self-Supervised Learning</li>
-                            <li>Transfer Learning</li>
-                            <li>Representation Learning</li>
+                <div class="skills-layout">
+                    <aside class="skills-overview">
+                        <p class="skills-overview__eyebrow">What I Bring</p>
+                        <h3>Research-minded machine learning with a strong systems and shipping bias.</h3>
+                        <p>
+                            My sweet spot is turning ambitious ML ideas into dependable software: experimenting with modern modeling approaches, measuring what matters, and then packaging everything into services that are maintainable in the real world.
+                        </p>
+                        <ul class="skills-highlights">
+                            <li>
+                                <span>Applied ML</span>
+                                <small>Fine-tuning, self-supervised learning, evaluation design, and model iteration.</small>
+                            </li>
+                            <li>
+                                <span>Inference & MLOps</span>
+                                <small>Serving, monitoring, drift-aware workflows, retraining loops, and deployment safety.</small>
+                            </li>
+                            <li>
+                                <span>Backend Engineering</span>
+                                <small>Production APIs, messaging, data systems, and infrastructure that supports ML products.</small>
+                            </li>
                         </ul>
-                    </section>
+                    </aside>
 
-                    <section class="skill-group skill-group--frameworks">
-                        <div class="skill-group__header">
-                            <span class="skill-group__icon"><i class="fa fa-cogs" aria-hidden="true"></i></span>
-                            <div>
-                                <p class="skill-group__eyebrow">Tooling</p>
-                                <h3>ML Frameworks</h3>
+                    <div class="skills-cards">
+                        <section class="skill-card skill-card--ml">
+                            <div class="skill-card__top">
+                                <span class="skill-card__icon"><i class="fa fa-line-chart" aria-hidden="true"></i></span>
+                                <div>
+                                    <p class="skill-card__eyebrow">Core</p>
+                                    <h3>Machine Learning</h3>
+                                </div>
                             </div>
-                        </div>
-                        <p class="skill-group__description">Libraries and tooling I use for training, evaluation, experimentation, and deployment workflows.</p>
-                        <ul class="skill-list">
-                            <li>PyTorch</li>
-                            <li>scikit-learn</li>
-                            <li>Deep Java Library (DJL)</li>
-                        </ul>
-                    </section>
+                            <p class="skill-card__description">Strong modeling foundations for experimentation, adaptation, and production-oriented learning systems.</p>
+                            <ul class="skill-pill-list">
+                                <li>Machine Learning</li>
+                                <li>Deep Learning</li>
+                                <li>Fine-Tuning</li>
+                                <li>Transfer Learning</li>
+                                <li>Representation Learning</li>
+                            </ul>
+                        </section>
 
-                    <section class="skill-group skill-group--vision">
-                        <div class="skill-group__header">
-                            <span class="skill-group__icon"><i class="fa fa-eye" aria-hidden="true"></i></span>
-                            <div>
-                                <p class="skill-group__eyebrow">Perception</p>
-                                <h3>Computer Vision</h3>
+                        <section class="skill-card skill-card--nlp">
+                            <div class="skill-card__top">
+                                <span class="skill-card__icon"><i class="fa fa-comments-o" aria-hidden="true"></i></span>
+                                <div>
+                                    <p class="skill-card__eyebrow">Language</p>
+                                    <h3>NLP & LLMs</h3>
+                                </div>
                             </div>
-                        </div>
-                        <p class="skill-group__description">Vision workflows spanning preprocessing, representation learning, and accuracy-focused evaluation.</p>
-                        <ul class="skill-list">
-                            <li>Computer Vision</li>
-                            <li>Image Classification</li>
-                            <li>Data Augmentation</li>
-                            <li>Test-Time Augmentation</li>
-                        </ul>
-                    </section>
+                            <p class="skill-card__description">Sequence modeling and transformer-based workflows for reasoning, multilingual tasks, and structured generation.</p>
+                            <ul class="skill-pill-list">
+                                <li>Transformers</li>
+                                <li>Attention Mechanisms</li>
+                                <li>LLMs</li>
+                                <li>Multilingual Modeling</li>
+                                <li>Text-to-SQL</li>
+                            </ul>
+                        </section>
 
-                    <section class="skill-group skill-group--nlp">
-                        <div class="skill-group__header">
-                            <span class="skill-group__icon"><i class="fa fa-comments-o" aria-hidden="true"></i></span>
-                            <div>
-                                <p class="skill-group__eyebrow">Language</p>
-                                <h3>NLP & LLMs</h3>
+                        <section class="skill-card skill-card--vision">
+                            <div class="skill-card__top">
+                                <span class="skill-card__icon"><i class="fa fa-eye" aria-hidden="true"></i></span>
+                                <div>
+                                    <p class="skill-card__eyebrow">Perception</p>
+                                    <h3>Computer Vision</h3>
+                                </div>
                             </div>
-                        </div>
-                        <p class="skill-group__description">Sequence modeling, attention-based architectures, and multilingual language understanding.</p>
-                        <ul class="skill-list">
-                            <li>Transformers</li>
-                            <li>Attention Mechanisms</li>
-                            <li>Large Language Models (LLMs)</li>
-                            <li>Multilingual Modeling</li>
-                        </ul>
-                    </section>
+                            <p class="skill-card__description">Vision pipelines that balance representation quality, augmentation strategy, and transfer performance.</p>
+                            <ul class="skill-pill-list">
+                                <li>Computer Vision</li>
+                                <li>Self-Supervised Learning</li>
+                                <li>Image Classification</li>
+                                <li>Data Augmentation</li>
+                                <li>Test-Time Augmentation</li>
+                            </ul>
+                        </section>
 
-                    <section class="skill-group skill-group--systems">
-                        <div class="skill-group__header">
-                            <span class="skill-group__icon"><i class="fa fa-random" aria-hidden="true"></i></span>
-                            <div>
-                                <p class="skill-group__eyebrow">Scale</p>
-                                <h3>ML Systems</h3>
+                        <section class="skill-card skill-card--systems">
+                            <div class="skill-card__top">
+                                <span class="skill-card__icon"><i class="fa fa-random" aria-hidden="true"></i></span>
+                                <div>
+                                    <p class="skill-card__eyebrow">Production</p>
+                                    <h3>MLOps & Inference</h3>
+                                </div>
                             </div>
-                        </div>
-                        <p class="skill-group__description">The systems side of ML, with a focus on throughput, serving reliability, and orchestration.</p>
-                        <ul class="skill-list">
-                            <li>Distributed Training</li>
-                            <li>Inference Pipelines</li>
-                            <li>Asynchronous Processing</li>
-                            <li>Model Serving</li>
-                        </ul>
-                    </section>
+                            <p class="skill-card__description">The systems side of ML, with an emphasis on reliability, observability, throughput, and safe model rollout.</p>
+                            <ul class="skill-pill-list">
+                                <li>Distributed Training</li>
+                                <li>Model Serving</li>
+                                <li>Inference Pipelines</li>
+                                <li>Drift Detection</li>
+                                <li>Canary Deployments</li>
+                            </ul>
+                        </section>
 
-                    <section class="skill-group skill-group--infra">
-                        <div class="skill-group__header">
-                            <span class="skill-group__icon"><i class="fa fa-database" aria-hidden="true"></i></span>
-                            <div>
-                                <p class="skill-group__eyebrow">Shipping</p>
-                                <h3>Backend & Infrastructure</h3>
+                        <section class="skill-card skill-card--frameworks">
+                            <div class="skill-card__top">
+                                <span class="skill-card__icon"><i class="fa fa-cogs" aria-hidden="true"></i></span>
+                                <div>
+                                    <p class="skill-card__eyebrow">Tooling</p>
+                                    <h3>Frameworks & Data</h3>
+                                </div>
                             </div>
-                        </div>
-                        <p class="skill-group__description">Backend technologies and deployment primitives I rely on to take ideas into production.</p>
-                        <ul class="skill-list">
-                            <li>Java</li>
-                            <li>Python</li>
-                            <li>Spring Boot</li>
-                            <li>Docker</li>
-                            <li>RabbitMQ</li>
-                            <li>SQL</li>
-                        </ul>
-                    </section>
+                            <p class="skill-card__description">Libraries and data tools I rely on for training, evaluation, analysis, and experiment workflows.</p>
+                            <ul class="skill-pill-list">
+                                <li>PyTorch</li>
+                                <li>scikit-learn</li>
+                                <li>Pandas</li>
+                                <li>Plotly</li>
+                                <li>DJL</li>
+                            </ul>
+                        </section>
+
+                        <section class="skill-card skill-card--infra">
+                            <div class="skill-card__top">
+                                <span class="skill-card__icon"><i class="fa fa-database" aria-hidden="true"></i></span>
+                                <div>
+                                    <p class="skill-card__eyebrow">Engineering</p>
+                                    <h3>Backend & Infrastructure</h3>
+                                </div>
+                            </div>
+                            <p class="skill-card__description">Backend services and deployment primitives that help move ML work from notebooks into production.</p>
+                            <ul class="skill-pill-list">
+                                <li>Java</li>
+                                <li>Python</li>
+                                <li>Spring Boot</li>
+                                <li>Docker</li>
+                                <li>RabbitMQ</li>
+                                <li>SQL</li>
+                            </ul>
+                        </section>
+                    </div>
                 </div>
             </div>
         </div>

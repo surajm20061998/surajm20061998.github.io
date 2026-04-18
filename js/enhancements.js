@@ -123,7 +123,8 @@
         '#education .education-block',
         '#projects .project',
         '#skills .skills-shell',
-        '#skills .skill-group',
+        '#skills .skills-overview',
+        '#skills .skill-card',
         '#contact #contact-form'
       ];
       reveals = Array.prototype.slice.call(document.querySelectorAll(selectors.join(',')));
@@ -143,7 +144,15 @@
       }
     } catch (e) {}
 
-    // 8) Contact quick actions (copy email)
+    // 8) Remove any stale injected skills filter UI
+    Array.prototype.forEach.call(
+      document.querySelectorAll('#skills input[type="search"], #skills input[placeholder*="Filter"], #skills input[placeholder*="filter"], #skills .skills-filter, #skills .skills-search'),
+      function (el) {
+        if (el && el.parentNode) el.parentNode.removeChild(el);
+      }
+    );
+
+    // 9) Contact quick actions (copy email)
     (function () {
       var form = document.querySelector('#contact-form');
       if (!form) return;
@@ -181,11 +190,11 @@
       });
     })();
 
-    // 9) Improve contact email placeholder
+    // 10) Improve contact email placeholder
     var emailInput = document.querySelector('#contact-form input[type="email"]');
     if (emailInput) emailInput.placeholder = 'Your email';
 
-    // 10) Hero role rotator
+    // 11) Hero role rotator
     (function () {
       var role = document.querySelector('#lead-content h2');
       if (!role) return;
