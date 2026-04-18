@@ -333,61 +333,120 @@
     <!-- End #projects -->
 
     <div id="skills">
-        <h2 class="heading">Skills</h2>
+        <div class="container">
+            <div class="skills-shell shadow-large">
+                <h2 class="heading">Skills</h2>
+                <p class="skills-intro">
+                    I like working across the full ML product stack, from research and training to inference, backend engineering, and the infrastructure that keeps models reliable in production.
+                </p>
 
-        <h4>Machine Learning & AI</h4>
-        <ul>
-        <li>Machine Learning</li>
-        <li>Deep Learning</li>
-        <li>Self-Supervised Learning</li>
-        <li>Transfer Learning</li>
-        <li>Representation Learning</li>
-        </ul>
+                <div class="skills-grid">
+                    <section class="skill-group skill-group--ml">
+                        <div class="skill-group__header">
+                            <span class="skill-group__icon"><i class="fa fa-line-chart" aria-hidden="true"></i></span>
+                            <div>
+                                <p class="skill-group__eyebrow">Core Area</p>
+                                <h3>Machine Learning & AI</h3>
+                            </div>
+                        </div>
+                        <p class="skill-group__description">Modeling foundations for experimentation, applied research, and production-oriented learning systems.</p>
+                        <ul class="skill-list">
+                            <li>Machine Learning</li>
+                            <li>Deep Learning</li>
+                            <li>Self-Supervised Learning</li>
+                            <li>Transfer Learning</li>
+                            <li>Representation Learning</li>
+                        </ul>
+                    </section>
 
-        <h4>ML Frameworks</h4>
-        <ul>
-        <li>PyTorch</li>
-        <li>scikit-learn</li>
-        <li>Deep Java Library (DJL)</li>
-        </ul>
+                    <section class="skill-group skill-group--frameworks">
+                        <div class="skill-group__header">
+                            <span class="skill-group__icon"><i class="fa fa-cogs" aria-hidden="true"></i></span>
+                            <div>
+                                <p class="skill-group__eyebrow">Tooling</p>
+                                <h3>ML Frameworks</h3>
+                            </div>
+                        </div>
+                        <p class="skill-group__description">Libraries and tooling I use for training, evaluation, experimentation, and deployment workflows.</p>
+                        <ul class="skill-list">
+                            <li>PyTorch</li>
+                            <li>scikit-learn</li>
+                            <li>Deep Java Library (DJL)</li>
+                        </ul>
+                    </section>
 
-        <h4>Computer Vision</h4>
-        <ul>
-        <li>Computer Vision</li>
-        <li>Image Classification</li>
-        <li>Data Augmentation</li>
-        <li>Test-Time Augmentation</li>
-        </ul>
+                    <section class="skill-group skill-group--vision">
+                        <div class="skill-group__header">
+                            <span class="skill-group__icon"><i class="fa fa-eye" aria-hidden="true"></i></span>
+                            <div>
+                                <p class="skill-group__eyebrow">Perception</p>
+                                <h3>Computer Vision</h3>
+                            </div>
+                        </div>
+                        <p class="skill-group__description">Vision workflows spanning preprocessing, representation learning, and accuracy-focused evaluation.</p>
+                        <ul class="skill-list">
+                            <li>Computer Vision</li>
+                            <li>Image Classification</li>
+                            <li>Data Augmentation</li>
+                            <li>Test-Time Augmentation</li>
+                        </ul>
+                    </section>
 
-        <h4>NLP & LLMs</h4>
-        <ul>
-        <li>Transformers</li>
-        <li>Attention Mechanisms</li>
-        <li>Large Language Models (LLMs)</li>
-        <li>Multilingual Modeling</li>
-        </ul>
+                    <section class="skill-group skill-group--nlp">
+                        <div class="skill-group__header">
+                            <span class="skill-group__icon"><i class="fa fa-comments-o" aria-hidden="true"></i></span>
+                            <div>
+                                <p class="skill-group__eyebrow">Language</p>
+                                <h3>NLP & LLMs</h3>
+                            </div>
+                        </div>
+                        <p class="skill-group__description">Sequence modeling, attention-based architectures, and multilingual language understanding.</p>
+                        <ul class="skill-list">
+                            <li>Transformers</li>
+                            <li>Attention Mechanisms</li>
+                            <li>Large Language Models (LLMs)</li>
+                            <li>Multilingual Modeling</li>
+                        </ul>
+                    </section>
 
-        <h4>ML Systems</h4>
-        <ul>
-        <li>Distributed Training</li>
-        <li>Inference Pipelines</li>
-        <li>Asynchronous Processing</li>
-        <li>Model Serving</li>
-        </ul>
+                    <section class="skill-group skill-group--systems">
+                        <div class="skill-group__header">
+                            <span class="skill-group__icon"><i class="fa fa-random" aria-hidden="true"></i></span>
+                            <div>
+                                <p class="skill-group__eyebrow">Scale</p>
+                                <h3>ML Systems</h3>
+                            </div>
+                        </div>
+                        <p class="skill-group__description">The systems side of ML, with a focus on throughput, serving reliability, and orchestration.</p>
+                        <ul class="skill-list">
+                            <li>Distributed Training</li>
+                            <li>Inference Pipelines</li>
+                            <li>Asynchronous Processing</li>
+                            <li>Model Serving</li>
+                        </ul>
+                    </section>
 
-        <h4>Backend & Infrastructure</h4>
-        <ul>
-        <li>Java</li>
-        <li>Python</li>
-        <li>Spring Boot</li>
-        <li>Docker</li>
-        <li>RabbitMQ</li>
-        <li>SQL</li>
-        </ul>
-
-
-            
-        </ul>
+                    <section class="skill-group skill-group--infra">
+                        <div class="skill-group__header">
+                            <span class="skill-group__icon"><i class="fa fa-database" aria-hidden="true"></i></span>
+                            <div>
+                                <p class="skill-group__eyebrow">Shipping</p>
+                                <h3>Backend & Infrastructure</h3>
+                            </div>
+                        </div>
+                        <p class="skill-group__description">Backend technologies and deployment primitives I rely on to take ideas into production.</p>
+                        <ul class="skill-list">
+                            <li>Java</li>
+                            <li>Python</li>
+                            <li>Spring Boot</li>
+                            <li>Docker</li>
+                            <li>RabbitMQ</li>
+                            <li>SQL</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- End #skills -->
 
