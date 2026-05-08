@@ -161,6 +161,20 @@
             <div class="row">
                 <div class="project shadow-large">
                     <div class="project-image">
+                        <img src="images/attention-dilution.png" />
+                    </div>
+                    <div class="project-info">
+                        <h3>Attention Dilution in Safety-Tuned LLMs: Long-Context Jailbreaks</h3>
+                        <p>
+                            NYU mechanistic interpretability study (Feb-Apr 2026) on why buried harmful requests bypass safety-tuned Qwen3-14B and Qwen3-8B models. Identified "Guardrail Heads" via direct logit attribution onto the refusal direction, then showed benign context dilutes their attention on harmful tokens even while harmful content remains represented.
+                            Refusal on Qwen3-14B halved with 31 padding tokens; the top guardrail head's harmful-token attention dropped 6x (44x on Qwen3-8B), distractor bloat was ~100x more efficient than prefix bloat, activation steering failed, and path patching localized partial recovery to mid-network head sets. Stack: PyTorch, TransformerLens, circuit-tracer, A100 GPUs, bf16 inference.
+                        </p>
+                        <a href="https://github.com/surajm20061998/interpretability_experiments/blob/main/Suraj/README.md">View Project</a>
+                    </div>
+                </div>
+
+                <div class="project shadow-large">
+                    <div class="project-image">
                         <img src="images/vicreg.png"/>
                     </div>
                     <div class="project-info">
