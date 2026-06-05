@@ -884,6 +884,12 @@ html.theme-dark #skills .skill-pill-list li {
   --skill-glow: rgba(139, 92, 246, 0.2);
 }
 
+.skill-card--training {
+  --skill-accent: #10b981;
+  --skill-badge: rgba(16, 185, 129, 0.14);
+  --skill-glow: rgba(16, 185, 129, 0.2);
+}
+
 .skill-card--systems {
   --skill-accent: #06b6d4;
   --skill-badge: rgba(6, 182, 212, 0.14);

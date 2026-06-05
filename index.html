@@ -361,7 +361,7 @@
             <div class="skills-shell shadow-large">
                 <div class="skills-header">
                     <p class="skills-intro">
-                        I work across modern ML research and production systems: mechanistic interpretability, LLM safety, representation learning, evaluation, backend services, and deployment workflows.
+                        I work across modern ML research and production systems: mechanistic interpretability, LLM safety, from-scratch LLM training, RL fine-tuning dynamics, neural scaling laws, representation learning, experiment orchestration, and deployment workflows.
                     </p>
                 </div>
 
@@ -370,20 +370,20 @@
                         <p class="skills-overview__eyebrow">What I Bring</p>
                         <h3>Research-minded machine learning with the engineering range to ship it.</h3>
                         <p>
-                            My work spans long-context LLM safety research, self-supervised vision, drift-aware inference platforms, quantitative analysis, and backend systems. I like problems where careful measurement and clean software have to meet.
+                            My work spans long-context jailbreak analysis, GRPO training autopsies, compute-optimal LLM scaling research, self-supervised vision, drift-aware inference platforms, quantitative analysis, and backend systems. I like problems where careful measurement and clean software have to meet.
                         </p>
                         <ul class="skills-highlights">
                             <li>
                                 <span>Mechanistic ML Research</span>
-                                <small>Transformer circuits, attention analysis, refusal behavior, path patching, and safety evaluation.</small>
+                                <small>Transformer circuits, guardrail head identification, attention dilution, refusal direction analysis, path patching, and long-context safety evaluation.</small>
                             </li>
                             <li>
-                                <span>Applied Modeling</span>
-                                <small>Self-supervised vision, NLP, multilingual transformers, anomaly detection, forecasting, and structured generation.</small>
+                                <span>LLM Training & Reasoning</span>
+                                <small>From-scratch transformers, BPE tokenization, GRPO/SFT pipelines, vLLM rollouts, verifiable reward design, math reasoning eval, and neural scaling-law sweeps.</small>
                             </li>
                             <li>
                                 <span>Production ML Systems</span>
-                                <small>Inference services, monitoring, drift-aware workflows, retraining loops, and backend infrastructure.</small>
+                                <small>Inference services, W&B experiment tracking, drift-aware workflows, retraining loops, canary releases, and backend infrastructure.</small>
                             </li>
                         </ul>
                     </aside>
@@ -397,13 +397,39 @@
                                     <h3>Mechanistic ML</h3>
                                 </div>
                             </div>
-                            <p class="skill-card__description">Interpreting transformer behavior through circuits, residual stream analysis, and targeted intervention experiments.</p>
+                            <p class="skill-card__description">Interpreting transformer behavior through circuits, residual stream analysis, guardrail identification, and targeted intervention experiments on safety-tuned models.</p>
                             <ul class="skill-pill-list">
                                 <li>Mechanistic Interpretability</li>
                                 <li>LLM Safety</li>
+                                <li>Long-Context Jailbreaks</li>
+                                <li>Guardrail Circuit Analysis</li>
                                 <li>Attention Analysis</li>
                                 <li>Direct Logit Attribution</li>
                                 <li>Activation & Path Patching</li>
+                                <li>Activation Steering</li>
+                            </ul>
+                        </section>
+
+                        <section class="skill-card skill-card--training">
+                            <div class="skill-card__top">
+                                <span class="skill-card__icon"><i class="fa fa-bolt" aria-hidden="true"></i></span>
+                                <div>
+                                    <p class="skill-card__eyebrow">Training</p>
+                                    <h3>LLM Training & RL</h3>
+                                </div>
+                            </div>
+                            <p class="skill-card__description">End-to-end language model training — from-scratch architectures, RL fine-tuning, scaling-law research, and instrumentation for dissecting training dynamics.</p>
+                            <ul class="skill-pill-list">
+                                <li>From-Scratch Transformers</li>
+                                <li>BPE Tokenization</li>
+                                <li>RoPE & SwiGLU</li>
+                                <li>GRPO & Policy Optimization</li>
+                                <li>Supervised Fine-Tuning</li>
+                                <li>vLLM Rollouts</li>
+                                <li>Neural Scaling Laws</li>
+                                <li>Compute-Optimal Sweeps</li>
+                                <li>Reward Engineering</li>
+                                <li>Training Dynamics Instrumentation</li>
                             </ul>
                         </section>
 
@@ -415,15 +441,18 @@
                                     <h3>NLP & LLMs</h3>
                                 </div>
                             </div>
-                            <p class="skill-card__description">Transformer-based workflows for reasoning, multilingual modeling, safety behavior, and structured generation.</p>
+                            <p class="skill-card__description">Transformer-based workflows for multilingual modeling, math reasoning evaluation, structured generation, and cross-linguistic interpretability.</p>
                             <ul class="skill-pill-list">
                                 <li>Transformers</li>
                                 <li>Attention Mechanisms</li>
-                                <li>LLMs</li>
-                                <li>Refusal Direction Analysis</li>
+                                <li>Decoder-Only LMs</li>
                                 <li>Multilingual Modeling</li>
+                                <li>Math Reasoning Eval</li>
+                                <li>Verifiable Reward Graders</li>
                                 <li>Text-to-SQL</li>
-                                <li>GRPO Fine-Tuning</li>
+                                <li>Seq2Seq Fine-Tuning</li>
+                                <li>KV-Cache Inference</li>
+                                <li>Attention Visualization</li>
                             </ul>
                         </section>
 
@@ -435,11 +464,13 @@
                                     <h3>Computer Vision</h3>
                                 </div>
                             </div>
-                            <p class="skill-card__description">Vision pipelines that balance representation quality, augmentation strategy, transfer performance, and industrial use cases.</p>
+                            <p class="skill-card__description">Vision pipelines that balance representation quality, augmentation strategy, transfer performance, and industrial quality-inspection use cases.</p>
                             <ul class="skill-pill-list">
                                 <li>Computer Vision</li>
                                 <li>Self-Supervised Learning</li>
                                 <li>VICReg</li>
+                                <li>ResNet Backbones</li>
+                                <li>Linear Probing</li>
                                 <li>Image Classification</li>
                                 <li>Data Augmentation</li>
                                 <li>Test-Time Augmentation</li>
@@ -455,12 +486,15 @@
                                     <h3>MLOps & Inference</h3>
                                 </div>
                             </div>
-                            <p class="skill-card__description">The systems side of ML, with an emphasis on reliability, observability, throughput, and safe model rollout.</p>
+                            <p class="skill-card__description">The systems side of ML — reliable serving, experiment tracking, drift-aware retraining, and safe model rollout with full observability.</p>
                             <ul class="skill-pill-list">
                                 <li>Model Serving</li>
                                 <li>MLflow</li>
+                                <li>Weights & Biases</li>
+                                <li>W&B Artifacts</li>
+                                <li>Checkpoint Management</li>
                                 <li>Inference Pipelines</li>
-                                <li>Drift Detection</li>
+                                <li>PSI Drift Detection</li>
                                 <li>Canary Deployments</li>
                                 <li>Automated Retraining</li>
                                 <li>Prometheus Monitoring</li>
@@ -475,13 +509,19 @@
                                     <h3>ML Frameworks & Analysis</h3>
                                 </div>
                             </div>
-                            <p class="skill-card__description">Libraries and data tools I rely on for training, interpretability, evaluation, analysis, and experiment workflows.</p>
+                            <p class="skill-card__description">Libraries and data tools for training, interpretability, rollout generation, evaluation, and reproducible experiment workflows.</p>
                             <ul class="skill-pill-list">
                                 <li>PyTorch</li>
+                                <li>NumPy</li>
                                 <li>TransformerLens</li>
                                 <li>circuit-tracer</li>
+                                <li>vLLM</li>
+                                <li>HuggingFace Transformers</li>
+                                <li>Weights & Biases</li>
+                                <li>SymPy</li>
                                 <li>scikit-learn</li>
                                 <li>Pandas</li>
+                                <li>Seaborn</li>
                                 <li>Plotly</li>
                                 <li>DJL</li>
                                 <li>bf16 / A100 Inference</li>
@@ -496,12 +536,18 @@
                                     <h3>Data, Quant & Evaluation</h3>
                                 </div>
                             </div>
-                            <p class="skill-card__description">Experiment design and data analysis for model behavior, finance research, climate signals, and security detection.</p>
+                            <p class="skill-card__description">Experiment design and data analysis for model behavior, ablation studies, finance research, climate signals, and security detection.</p>
                             <ul class="skill-pill-list">
                                 <li>Evaluation Design</li>
+                                <li>Ablation Sweeps</li>
+                                <li>Hyperparameter Search</li>
+                                <li>Perplexity & Loss Tracking</li>
                                 <li>Time-Series Analysis</li>
                                 <li>Quant Research</li>
+                                <li>Backtesting</li>
+                                <li>Sharpe & Sortino Analysis</li>
                                 <li>Anomaly Detection</li>
+                                <li>Feature Selection</li>
                                 <li>Statistical Modeling</li>
                                 <li>Data Visualization</li>
                             </ul>
@@ -515,15 +561,19 @@
                                     <h3>Backend & Infrastructure</h3>
                                 </div>
                             </div>
-                            <p class="skill-card__description">Backend services and deployment primitives that help move ML work from notebooks into production.</p>
+                            <p class="skill-card__description">Backend services, workflow orchestration, and deployment primitives that help move ML work from notebooks into production.</p>
                             <ul class="skill-pill-list">
                                 <li>Python</li>
                                 <li>Java / Spring Boot</li>
                                 <li>Microservices</li>
+                                <li>Workflow Orchestration</li>
+                                <li>jBPM</li>
                                 <li>Docker</li>
+                                <li>Docker Compose</li>
                                 <li>RabbitMQ</li>
                                 <li>PostgreSQL / SQL</li>
                                 <li>MinIO</li>
+                                <li>CI/CD Pipelines</li>
                             </ul>
                         </section>
                     </div>
