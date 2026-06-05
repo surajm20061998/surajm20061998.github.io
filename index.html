@@ -175,6 +175,32 @@
 
                 <div class="project shadow-large">
                     <div class="project-image">
+                        <img src="images/small-model-grpo.png" />
+                    </div>
+                    <div class="project-info">
+                        <h3>An Empirical Autopsy of Small-Model GRPO</h3>
+                        <p>
+                            Research codebase (Apr 2026 – Present) investigating GRPO training dynamics on small (≤1.5B) math-reasoning models — dissecting how the policy evolves during RL rather than only measuring end-task accuracy. Built an SFT pipeline on Intellect-Math with automated hyperparameter search and best-checkpoint selection; a from-scratch GRPO trainer on Countdown with vLLM-accelerated rollouts, group-normalized advantages, and three interchangeable loss formulations; verifiable AST/fraction and LaTeX/SymPy reward graders; and longitudinal autopsy instrumentation that re-samples a fixed difficulty-stratified probe set at every checkpoint, capturing per-token log-probs, entropy, rollouts, and reward-conditioned response length. One-command ablation sweeps across loss type, length/std normalization, and learning rate with full W&B tracking and artifact upload. Stack: Python, PyTorch, vLLM, Weights & Biases.
+                        </p>
+                        <a href="https://github.com/surajm20061998/smallModelGRPO">View Project</a>
+                    </div>
+                </div>
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/llm-scaling-laws.png" />
+                    </div>
+                    <div class="project-info">
+                        <h3>A Compute-Optimal LLM Training & Scaling-Laws Research Framework</h3>
+                        <p>
+                            Built a complete LLM training pipeline in pure PyTorch (~3.6K LOC, no high-level model libraries) to study neural scaling laws end-to-end — from raw text to compute-optimal training curves (Feb 2026 – Present). Implemented multiprocessing BPE tokenization, a decoder-only Transformer from scratch (RoPE, RMSNorm, SwiGLU, causal multi-head attention), custom AdamW with linear-warmup cosine decay, memory-mapped data loading with multiprocess batch prefetching, and W&B integration with versioned dataset artifacts and checkpoint management. Automated Chinchilla-style scaling sweeps across model sizes × token budgets, logging validation loss/perplexity, tokens/sec, wall-clock, parameter counts, and a FLOPs proxy. Future work extends the matched-compute harness to compare SSM, sub-quadratic attention, and MoE architectures against the Transformer baseline. Stack: Python, PyTorch, NumPy, Weights & Biases.
+                        </p>
+                        <a href="https://github.com/surajm20061998/mini_openAi">View Project</a>
+                    </div>
+                </div>
+
+                <div class="project shadow-large">
+                    <div class="project-image">
                         <img src="images/vicreg.png"/>
                     </div>
                     <div class="project-info">
@@ -307,22 +333,6 @@
                 <!-- Projects Above -->
                 <a id="view-more-projects" href="#">My Projects in Progress</a>
                 <div id="more-projects" class="row">
-                    <div class="project shadow-large">
-                        <div class="project-image">
-                            <img src="images/grpo-math.png" />
-                        </div>
-                        <!-- End .project-image -->
-                        <div class="project-info">
-                            <h3>Implementing GRPO from Scratch for Fine-Tuning Models on MATH Problems</h3>
-                            <p>
-                                Currently building a reinforcement learning pipeline from the ground up using Group Relative Policy Optimization (GRPO) to fine-tune language models for stronger mathematical reasoning. The project focuses on reward design, stable policy updates, and measurable gains on challenging MATH-style problem-solving tasks.
-                            </p>
-                            <!-- <a href="#">View Project</a> -->
-                        </div>
-                        <!-- End .project-info -->
-                    </div>
-                    <!-- End .project -->
-
                     <div class="project shadow-large">
                         <div class="project-image">
                             <img src="images/t5-test-to-sql.png" />
