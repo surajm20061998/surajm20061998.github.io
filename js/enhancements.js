@@ -93,11 +93,6 @@
     window.addEventListener('resize', throttle(setProgress, 100));
 
     // 5) External links behavior
-    var resumeLink = document.querySelector('#lead-content a.btn-rounded-white');
-    if (resumeLink) {
-      resumeLink.setAttribute('target', '_blank');
-      resumeLink.setAttribute('rel', 'noopener');
-    }
     Array.prototype.forEach.call(document.querySelectorAll('.project-info a, footer .social a'), function (a) {
       a.setAttribute('target', '_blank');
       a.setAttribute('rel', 'noopener');
